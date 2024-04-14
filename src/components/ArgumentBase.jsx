@@ -1,15 +1,15 @@
 function ArgBase(props)
 {
   return (
-    <div class="argBase">
-      <div class="argDescription"> {props.description} </div>
-      <div class="argVotes">
-        <div class="arg-for"> {props.votesFor} </div>
-        <div class="arg-against"> {props.votesAgainst} </div>
+    <div className="argBase" data-side={props.side}>
+      <div className="argDescription"> {props.description} </div>
+      <div className="argVotes">
+        <div className="arg-for"> {props.votesFor} </div>
+        <div className="arg-against"> {props.votesAgainst} </div>
       </div>
-      <div class="contrArguments">
-        <div class="arg-contrArg"> {props.contrArgs} </div>
-        <div class="arg-contrArg-unverif"> {props.contrArgs_unverif} </div>
+      <div className="contrArguments">
+        <div className="arg-contrArg"> {props.contrArgs} </div>
+        <div className="arg-contrArg-unverif"> {props.contrArgs_unverif} </div>
       </div>
     </div>
   )

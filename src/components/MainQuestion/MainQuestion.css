@@ -1,0 +1,45 @@
+.mainQuestion {
+    width: 30%;
+    margin: auto;
+    background: rgb(219 219 233);
+}
+
+.argumentsContainer {
+    display: flex;
+}
+
+.argSides {
+    flex-basis: 50%;
+    padding: 10px;
+    display: flex;
+}
+
+.leftSide {
+    justify-content: flex-end;
+    background: red;
+}
+
+.rightSide {
+    background: blue;
+}
+
+.argBase{
+    display: grid;
+    grid-template-areas: "descr descr"  
+                         "votes args";
+    background: rgb(255 218 253);
+    padding: 5px;
+    width: 150px;
+}
+
+.argDescription { 
+    grid-area: descr;
+} 
+.argVotes { 
+    grid-area: votes;
+} 
+.contrArguments { 
+    display: flex;
+        justify-content: space-around;
+    grid-area: args;
+} 
