@@ -1,8 +1,7 @@
-function Button({children, test})
+function Button({children, className, onClick})
 {
-    console.log(test)
     return (
-        <button className={test}> {children} </button>
+        <button className={className} onClick={onClick}> {children} </button>
     )
 }
 
