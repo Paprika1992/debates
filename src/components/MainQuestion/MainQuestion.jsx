@@ -1,27 +1,19 @@
 import './MainQuestion.css';
 import Button from './../Button.jsx';
 import PopupForm from './../Popup/PopupForm.jsx';
+import { useState } from 'react';
 
 //Не должно быть голосов ЗА и ПРОТИВ и вопроса. Хотите изучить предмет - читайте аргументы за и против
 
 function MainQuestion(props)
 {
+  let [ component, testFunc ] = useState();
   function callOpinionForm (opinion)
   {
+    testFunc(opinion)
     console.log(opinion)
-    let opinionForm_class;
-    switch (opinion) {
-      case 'agree':
-        opinionForm_class = 'agree'
-        break;
-      case 'disagree':
-        opinionForm_class = 'agree'
-        break;
-      default:
-        break;
-    }
 
-    return <PopupForm />
+    // return <PopupForm />
   }
 
   return (
@@ -38,6 +30,7 @@ function MainQuestion(props)
             <Button className="mainQuestion-button-disagree" onClick={() => callOpinionForm('disagree')} > Не согласен </Button>
           </div>
         </div>
+        {component ? <PopupForm dataOpinion={component} /> : "пусто"}
     </div>
   )
 }

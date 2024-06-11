@@ -1,11 +1,16 @@
 
 import MainQuestion from './components/MainQuestion/MainQuestion';
+import CompOne from './components/CompOne/CompOne';
+import CompTwo from './components/CompTwo/CompTwo';
 import ArgBase from './components/ArgumentBase';
-// import Button from './components/Button';
 import Header from './components/Header';
+import TabBlock from './components/TabBlock/TabBlock';
+import { useState } from 'react';
 
 function App()
 {
+  let [tabName, setTab] = useState(null)
+
   return (
     <div>
       <Header />
@@ -20,8 +25,10 @@ function App()
           </div>
         </div>
       </div>
-      {/* <Button test="test">Кнопка</Button> */}
-      <h1>Hello React</h1>
+      <TabBlock onHide={(current) => setTab(current)} />
+
+      {tabName == 'compOne' ? <><CompOne /></> : <><CompTwo /></>}
+      
     </div>
   )
 }

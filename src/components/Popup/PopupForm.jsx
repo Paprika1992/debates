@@ -18,9 +18,10 @@ function PopupForm (props)
     // }
 
     return (
-        <div id='popupForm' className={props.className}>
-            Здесь будет форма
-        </div>
+        <div id="testForm">{props.dataOpinion}</div>
+        // <div id='popupForm' className={props.className}>
+        //     Здесь будет форма
+        // </div>
     )
 }
 
